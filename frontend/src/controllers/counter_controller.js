@@ -1,13 +1,20 @@
 import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller {
-    connect() {
-      this.count = 0;
-      this.element.innerHTML = 'Click me';
-      
-      this.element.addEventListener('click', () => {
-        this.count++;
-        this.element.innerHTML = `You clicked ${this.count} times`;
-      });
-    }
+  static values = {
+    count: { type: Number, default: 0 },
+  };
+  
+  connect() {
+    this.element.innerHTML = 'Click me';
+  }
+
+  countValueChanged(value, previousValue) {
+    console.log(`${previousValue} changed to ${value}`);
+  }
+
+  increment(){
+    this.countValue++;
+    this.element.innerHTML = `You clicked ${this.countValue} times`;
+  }
 }

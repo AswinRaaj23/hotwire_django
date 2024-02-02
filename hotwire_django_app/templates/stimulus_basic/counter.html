@@ -6,11 +6,11 @@
 
   <h1 class="text-4xl sm:text-6xl lg:text-7xl mb-6">Counter</h1> 
   
-  <button class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg" data-controller="counter"></button>
+  <button class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg" data-controller="counter" data-action="click->counter#increment"></button>
 
-  <h1 data-controller="counter" class="text-4xl sm:text-6xl lg:text-7xl mb-6"></h1>
+  <h1 data-controller="counter" data-action="click->counter#increment" class="text-4xl sm:text-6xl lg:text-7xl mb-6"></h1>
 
-  <div data-controller="counter" class="text-4xl"></div>
+  <div data-controller="counter" data-action="click->counter#increment" class="text-4xl"></div>
 
 </div>
 
