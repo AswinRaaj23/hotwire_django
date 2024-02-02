@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_tailwind',
     'hotwire_django_app.turbo_frame',
     'turbo_response',
+    'hotwire_django_app.stimulus_basic',
 ]
 
 MIDDLEWARE = [
