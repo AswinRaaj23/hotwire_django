@@ -5,12 +5,19 @@
 
 <div class="w-full max-w-7xl mx-auto px-4">
 
-  <form method="post">
+  <form
+      method="post"
+      data-controller="form"
+      data-action="turbo:submit-start->form#submitStart turbo:submit-end->form#submitEnd"
+  >
     {% csrf_token %}
 
     {{ form|crispy }}
 
-    <button type="submit" class="btn-blue">Submit</button>
+    <button data-form-target="submit" type="submit" class="btn-blue">
+      {% include 'stimulus_basic/spinner.html' %}
+      Submit
+    </button>
   </form>
 
 </div>
