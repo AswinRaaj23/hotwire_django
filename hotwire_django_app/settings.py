@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'hotwire_django_app.turbo_frame',
     'turbo_response',
     'hotwire_django_app.stimulus_basic',
+    'django.forms',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,5 @@ WEBPACK_LOADER = {
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
 CRISPY_TEMPLATE_PACK = "tailwind"
+
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting' 
