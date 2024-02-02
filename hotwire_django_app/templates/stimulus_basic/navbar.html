@@ -1,7 +1,28 @@
+{% comment %} <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-4">
+  <div class="w-full">
+    <a href="{% url 'stimulus-basic:counter' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">
+      Counter
+    </a>
+  </div>
+</nav> {% endcomment %}
+
 <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-4">
   <div class="w-full">
     <a href="{% url 'stimulus-basic:counter' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">
       Counter
     </a>
+
+    {% comment %} <a href="{% url 'stimulus-basic:turbo_frame_load' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">
+      Turbo Frame
+    </a> {% endcomment %}
+
+    <a href="{% url 'stimulus-basic:task-list' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">
+      List
+    </a>
+
+    <a href="{% url 'stimulus-basic:task-create' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">
+      Create
+    </a>
+
   </div>
 </nav>
