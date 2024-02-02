@@ -1,20 +1,26 @@
-import { Controller } from '@hotwired/stimulus';
+import {Controller} from '@hotwired/stimulus';
 
 export default class extends Controller {
   static values = {
     count: { type: Number, default: 0 },
   };
-  
-  connect() {
-    this.element.innerHTML = 'Click me';
-  }
+  static targets = [
+    'count',
+    'initialDiv',
+    'progressDiv'
+  ];
+  static classes = ['hidden'];
 
   countValueChanged(value, previousValue) {
     console.log(`${previousValue} changed to ${value}`);
+    if (value === 1){
+      this.initialDivTarget.classList.add(this.hiddenClass);
+      this.progressDivTarget.classList.remove(this.hiddenClass);
+    }
   }
 
   increment(){
     this.countValue++;
-    this.element.innerHTML = `You clicked ${this.countValue} times`;
+    this.countTarget.innerText = this.countValue;
   }
 }
